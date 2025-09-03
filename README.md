@@ -96,7 +96,7 @@ Before you begin, ensure you have:
 ### 1. Clone and Install
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/diegolarraz/shopify-next-supabase-starter
 cd shopify-next-supabase-starter
 npm install
 ```
