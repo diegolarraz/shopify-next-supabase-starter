@@ -1,33 +1,23 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import Providers from "./providers/providers";
 
 import type { Metadata } from "next";
-
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Shopify Next Supabase Starter",
-  description:
-    "This is a template for a Shopify Next.js app with Supabase, Shopify App Bridge, React Query, GraphQL Codegen, and Tailwind CSS",
+  other: {
+    "shopify-api-key": process.env.NEXT_PUBLIC_SHOPIFY_API_KEY || "",
+    "shopify-app-origins": process.env.NEXT_PUBLIC_HOST || "",
+  },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+      <head />
+      <body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

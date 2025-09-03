@@ -1,7 +1,3 @@
-export default function Home() {
-  return (
-    <div>
-      <h1>Shopify Next Supabase Starter</h1>
-    </div>
-  );
+export default function Page() {
+  return <main className="p-6">App is running. Add your embedded UI here.</main>;
 }
