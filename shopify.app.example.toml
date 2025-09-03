@@ -1,0 +1,26 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "your-app-name"
+client_id = "your-client-id"
+application_url = "https://your-ngrok-or-vercel-host"
+embedded = true
+
+[access_scopes]
+# https://shopify.dev/docs/api/usage/access-scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://your-ngrok-or-vercel-host/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-10"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "your-development-store.myshopify.com"
+include_config_on_deploy = true
