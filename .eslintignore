@@ -1,9 +1,0 @@
-# .eslintignore
-node_modules
-.next
-out
-.turbo
-coverage
-lib/gql
-**/*.generated.*
-**/*.d.ts

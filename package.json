@@ -7,7 +7,11 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "next lint",
-    "format": "next lint --fix",
+    "lint:fix": "next lint --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "format:lint": "npm run format && npm run lint:fix",
+    "imports:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
     "graphql-codegen": "graphql-codegen"
   },
   "dependencies": {
@@ -25,6 +29,10 @@
     "@typescript-eslint/parser": "^8.42.0",
     "eslint": "^9.34.0",
     "eslint-config-next": "^15.5.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.6.2",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
